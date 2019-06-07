@@ -8,3 +8,15 @@ div.center {
   font-size: 18px;
   margin:auto;
 }
+a:link {
+  color: #888888;
+}
+a:visited {
+  color: #666666;
+}
+a:hover {
+  color: #0088FF;
+}
+a:active {
+  color: #0088FF;
+}
