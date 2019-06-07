@@ -1,6 +1,6 @@
 let voters;
 let off;
-let size = 20;
+let size = 80;
 let canvas;
 
 function setup() {
@@ -49,5 +49,5 @@ function voter(x, y, o, v) { //x,y is the position, o is the offset and v is the
 			break;
 	}
 	//Head
-	rect(x, y+(sin((frameCount/10)+o)*(size/4)), x+size, (y+(sin((frameCount/10)+o)*(size/4)))+size);
+	rect(x, y+(sin((frameCount/10)+o)*(size/4)), x+size, (y+(sin((frameCount/10)+o)*(size/4)))+(size/2));
 }
