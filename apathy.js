@@ -22,14 +22,14 @@ function draw() {
 	//Draw all the voters
 	let x;
 	let y;
-	for(let i = 0; i < voters.length; i++) {
+	/*for(let i = 0; i < voters.length; i++) {
 		x += size;
 		if(x == width-size) {
 			x = 0;
 			y += size;
 		}
 		voter(x, y, off[i], voters[i]);
-	}
+	}*/
 }
 function voter(x, y, o, v) { //x,y is the position, o is the offset and v is the vote
 	//Legs
