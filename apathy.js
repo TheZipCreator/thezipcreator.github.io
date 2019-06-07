@@ -1,6 +1,6 @@
 let voters;
 let off;
-let size = 80;
+let size = 40;
 let canvas;
 
 function setup() {
@@ -32,10 +32,6 @@ function draw() {
 	}
 }
 function voter(x, y, o, v) { //x,y is the position, o is the offset and v is the vote
-	//Legs
-	stroke(0);
-	line(x+(size/2), y, x, y);
-	line(x, y, x, y-(size/2));
 	//Color
 	switch(v) {
 		case 0:
@@ -49,5 +45,5 @@ function voter(x, y, o, v) { //x,y is the position, o is the offset and v is the
 			break;
 	}
 	//Head
-	rect(x, y+(sin((frameCount/10)+o)*(size/4)), x+size, (y+(sin((frameCount/10)+o)*(size/4)))+(size/2));
+	rect(x, y+(sin((frameCount/10)+o)*(size/4)), size, size/2);
 }
