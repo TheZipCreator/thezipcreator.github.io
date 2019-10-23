@@ -6,7 +6,7 @@ div.center {
   text-align: center;
   font-size: 18px;
   margin:auto;
-  color: #BBBBBB;
+  background-color: #BBBBBB;
 }
 p.title {
   text-size: 72px;
