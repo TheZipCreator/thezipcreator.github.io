@@ -12,10 +12,10 @@ p.title {
   text-size: 72px;
 }
 a:link {
-  color: #FFFF00;
+  color: #888800;
 }
 a:visited {
-  color: #888800;
+  color: #FFFF00;
 }
 a:hover {
   color: #0088FF;
