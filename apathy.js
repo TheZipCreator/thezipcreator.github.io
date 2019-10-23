@@ -23,11 +23,11 @@ function draw() {
 	let x = 0;
 	let y = 0;
 	for(let i = 0; i < voters.length; i++) {
-		x += size;
 		if(x == width-size) {
 			x = 0;
 			y += size;
 		}
+		x += size;
 		voter(x, y, off[i], voters[i]);
 	}
 }
