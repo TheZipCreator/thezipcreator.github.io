@@ -35,7 +35,7 @@ function simulateElection() {
 	partyVotes = []; //Counts how many votes each party gets
 	textPos = 16;
 	reactionary = false;
-	parties.push(new Party("Labor", -1, -1));
+	parties.push(new Party("Labor", -1, -1)); //Init all parties
 	parties.push(new Party("Liberal", 1, 1));
 	parties.push(new Party("Social", -2, -2));
 	parties.push(new Party("Conservative", 2, 2));
@@ -44,10 +44,16 @@ function simulateElection() {
 	parties.push(new Party("Reactionary", 4, 4));
 	parties.push(new Party("Communist", -1, -3));
 	//console.log(parties.length);
+	for(let i = 0; i < parties.length; i++) { //20% chance each party has a scandal (+1 to all distance calculations for that party)
+		if(random(5) < 1) {
+			parties[i].scandal = true;
+			console.log(parties[i].name+" has a scandal");
+		}
+	}
 	for(let i = 0; i < parties.length; i++) {
 		partyVotes[i] = 0;
 	}
-	if(random(1,20) < 1) {
+	if(random(20) < 1) {
 		reactionary = true;
 	}
 	for(let i = 0; i < numVoters; i++) {
@@ -79,7 +85,7 @@ function simulateElection() {
 			let bestParty = -1;
 			let distance = 999;
 			for(let j = 0; j < parties.length; j++) { //Calculate 
-				let distToParty = dist(voters[i].x, voters[i].y, parties[j].x, parties[j].y);
+				let distToParty = dist(voters[i].x, voters[i].y, parties[j].x, parties[j].y)+parties[j].scandal;
 				if(distToParty < distance) {
 					bestParty = j;
 					distance = distToParty;
@@ -130,6 +136,7 @@ class Party {
 		this.name = n;
 		this.x = x;
 		this.y = y;
+		this.scandal = false;
 	}
 }
 
