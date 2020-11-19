@@ -88,7 +88,7 @@ function simulateElection() {
 			partyVotes[bestParty]++;
 		}
 		for(let i = 0; i < parties.length; i++) { //Print how many votes each party got
-			printText(parties[i].name+" got "+((partyVotes[i]/numVoters)*100)+"% of the vote");
+			printText(parties[i].name+" got "+nf(((partyVotes[i]/numVoters)*100), 0, 2)+"% of the vote");
 		}
 		printText("---");
 		if(parties.length > 1) {
