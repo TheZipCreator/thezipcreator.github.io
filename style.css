@@ -4,6 +4,9 @@
 }
 body {
 	font-family: Montserrat;
+	margin: 0;
+	padding: 0;
+	background-color: #222222;
 }
 div.center {
 	width: 75%;
