@@ -16,8 +16,18 @@ div.center {
 	background-color: #111111;
 	color: #FFFFFF
 }
+div.article {
+	width: 70%;
+	text-align: center;
+	font-size: 18px;
+	margin:auto;
+	background-color: #222222;
+	color: #FFFFFF;
+	border-radius: 25px;
+}
 p.title {
-	text-size: 72px;
+	font-size: 36px;
+	color: #FFFFFF !important;
 }
 a:link {
 	color: #dd9802;
