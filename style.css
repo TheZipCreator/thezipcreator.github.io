@@ -8,6 +8,11 @@ body {
 	padding: 0;
 	background-color: #222222;
 }
+textarea.nowordwrap {
+  white-space: pre;
+  overflow-wrap: normal;
+  overflow-x: scroll;
+}
 div.center {
 	width: 75%;
 	text-align: center;
