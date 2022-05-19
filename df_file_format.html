@@ -1,0 +1,37 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>DF File Format</title>
+</head>
+<html>
+  <body>
+    <div class='center'>
+      <h1>DF File Format</h1>
+      <p style="color: red;">NOTE: This is still a work in progress</p>
+      <br>
+      <p>This page contains all information about the DiamondFire/Hypercube file format used for functions</p>
+      <h2>Basic Structure</h2>
+       <p>
+        The basic structure of a Hypercube function contains a base-64 gzipped base-64 encoded string, which when unzipped gives a human-readable json file. Inside this file is an object containing an array of objects called <code>"blocks"</code>, where each object contains a single DF command.<br>
+        Each item contains the key <code>id</code> which is usually either <code>block</code> or <code>bracket</code>. Blocks are your standard df functions, that is anything that isn't pistons. Meanwhile brackets are pistons.<br>
+        Keys in blocks: <code>block</code>, which represents the type of block, and <code>args</code> which contains the arguments of the block.<br>
+        Keys in brackets: <code>direct</code>, which represents the direction of the bracket, and is either <code>open</code> or <code>open</code> or <code>close</code>, and <code>type</code> which can be <code>norm</code>, which is normal pistons, and <code>repeat</code>, which is sticky pistons.
+        </p>
+      <h2>Items</h2>
+        <p>
+          Within every <code>args</code> in a block, there is a <code>items</code> array, which contains objects, each corresponding to one item in a chest. Each item contains an <code>id</code>, a <code>slot</code> which represents the item's slot in the chest, and a <code>data</code> object, which are summarized in the following table:
+          <table>
+            <tr>
+              <th>id</th>
+              <th>use</th>
+              <th>data</th>
+            </tr>
+            <tr>
+              <td>bl_tag</td>
+              <td>Tags within certain blocks</td>
+              <td>Option: The option that was chosen<br>Tag: The name of the tag<br>Action: TODO<br>Block: What type of block this tag refers to</td>
+              
+          </table>
+        </p>
+    </div>
+  </body>
+</html>
