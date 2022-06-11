@@ -3,6 +3,10 @@
 	src: url(../SourceCodePro-Regular.ttf)
 }
 @font-face {
+	font-family: Montserrat;
+	src: url(../Montserrat-Regular.ttf)
+}
+@font-face {
   font-family: FixedSys;
   src: url(FSEX300.ttf)
 }
@@ -13,10 +17,11 @@ pre {
   white-space: -pre-wrap;      /* Opera 4-6 */
   white-space: -o-pre-wrap;    /* Opera 7 */
   word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  font-family: SourceCodePro;
 }
 
 body {
-	font-family: SourceCodePro;
+	font-family: Montserrat;
 	margin: 0;
 	padding: 0;
 	background-color: #222222;
