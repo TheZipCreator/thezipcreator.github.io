@@ -1,0 +1,89 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>DF Function Rework</title>
+</head>
+<html>
+  <body>
+    <div class='center'>
+       <h1>DiamondFire Function Rework</h1>
+        <p>This is a suggested rework of the way functions in DiamondFire work and behave</p>
+       <h2>Prelude</h2>
+        <p>
+          Currently, in DiamondFire, functions are just snippets of code that can be called anywhere, however can not return anything or take any arguments.<br>
+          This is fine for reusing code, however whenever you want a function to, for example, getting something from some data structure, or rendering something that is variable and needs arguments, this is a bit of a problem.<br>
+          The current solution is just to create a global variable containing the arguments, and then just call the function. Then, when you wish to return something, you can set a new global variable to the return value.<br>
+          This is <i>fine</i>, I guess, but it is a bit of a hack, and we could do much better.<br>
+          (also I'm going to be using my own improvised syntax to represent DiamondFire code blocks, but it should hopefully be easily understandable)
+        </p>
+      <h2>Solution</h2>
+        <p>
+          Fixing this would not be too difficult (at least I assume so, but I'm not sure how the codebase of DiamondFire works, so it may be harder than it seems). All we would need to do is
+          <ul>
+            <li>1. Create a way to pass arguments to a function</li>
+            <li>2. Add a way for functions to return things</li> 
+          </ul>
+          Not that bad, eh?<br>
+          <h3>Arguments</h3>
+          The first thing we need to do is to create a way to pass arguments to a function.<br>
+          My suggestion is that in the function chest, after the icon is specified, you should be able to specify a list of variables that act as arguments. These variables will act the same a "LOCAL" variables, and will be used as such. This would look like this:<br>
+          <pre>
+            FUNCTION myFunc [item(emerald) var(x) var(y)]
+          </pre>
+          This would mean that the function will take two arguments, and will store them in the variables x and y.<br>
+          It could them use them like this:<br>
+          <pre>
+            FUNCTION myFunc [item(emerald) var(x) var(y)];
+            SETVAR + [var(z) var(x) num(2)];
+            SETVAR *= [var(z) var(y)];
+            # now we have var(z) = (var(x)+2)*var(y)
+          </pre>
+          <h3>Returning</h3>
+          Currently, we have a CONTROL RETURN command, which is used to return from a function. However, no value can be returned. It simply goes back to executing the previous code that was running before the function was called. However, we could give the CONTROL RETURN block a chest in order to contain the return value. This would look like this:<br>
+          <pre>
+            FUNCTION myFunc [item(emerald), var(x), var(y)]
+            SETVAR + [var(z), var(x), num(2)];
+            SETVAR *= [var(z), var(y)];
+            CONTROL RETURN [var(z)];
+          </pre>
+          This would mean that the function would return the value of the variable z.<br>
+          So now that we have a way to pass in arguments and return values on the <i>function</i> side, we now need a way to actually pass them into the function.
+          <h3>Call Function</h3>
+          The current way to call a function is via the CALLFUNCTION block. This block has no chest and just calls the function, and once the function is done, it returns to the code that called it. I propose that we add a chest to the CALLFUNCTION block, and then we can pass in arguments to the function. The first item would be a variable to store the return value, and then the remaining items would be the arguments. The chest could also be left empty for functions that do not return anything. If a function requires arguments but does not return anything, the first item can just be left as air. This would look like this:<br>
+          <pre>
+            # calling a function with no arguments or return value
+            CALLFUNCTION myFunc [];
+            # calling a function with arguments and return value
+            CALLFUNCTION myFunc [var(res), var(x), num(3), text(Hello, World!)];
+            # calling a function with no arguments but return value
+            CALLFUNCTION myFunc [var(res)];
+            # calling a function with arguments but no return value
+            CALLFUNCTION myFunc [,var(x), num(3), text(Hello, World!)]; # note the comma in the first item. This represents an air item.
+          </pre>
+          <h3>%call</h3>
+          Another way to call a function would be through the %call text code. This would take in a function name, and then a list of arguments. This way, it can be nested within larger expressions. This would look like this:<br>
+          <pre>
+            SETVAR = [var(x), num( %call(myFunc, num(1), num(2)) )];
+            #equivalent to CALLFUNCTION myFunc [var(x), num(1), num(2)];
+          </pre>
+          <h3>Other Things</h3>
+          Now that functions are more than just reusable blocks of code, and closer to the mathematical definition of a function, we can use them in more abstract ways, such as implementing some functional programming concepts. Like, for example, lambda expressions.<br>
+          I should note here that this part isn't quintessential to my suggestion, it's more just a thing that would be nice to have.
+          <h3>Lambda Expressions</h3>
+          Lambda expressions are basically just anonymous functions; that is functions without a name. How would that work? Well, in order to call them, they would first need to be in a variable. A lambda expression could be defined with a new addition to the SETVAR block, called LAMBDA. This would look like this:<br>
+          <pre>
+            SETVAR LAMBDA [var(func), var(x), var(y)] {
+              SETVAR + [var(z), var(x), num(2)];
+              SETVAR *= [var(z), var(y)];
+              CONTROL RETURN [var(z)];
+              #creates a function that returns (x+2)*y and stores it in var(z)
+            }
+          </pre>
+          (the braces {} represent pistons)<br>
+          Now that this function is in a variable, you can call it using %call the same way you'd call any other function. However, you could also pass it in as an argument to <i>another function</i>, and put it in arrays and dictionaries, and so on. This would allow many new things to be implemented. In fact, using dictionaries, you could implement javascript-like object-oriented-programming.
+          <h3>Conclusion</h3>
+          So yeah, that's my idea for revising DiamondFire functions. I don't think that the first bit (adding arguments and return values) would be that difficult, but the lambda expressions might be harder. I mainly just want the first part to be implemented, and while I would like for lambda expressions to be implemented, I would understand if they wouldn't be.<br>
+          That's about it, goodbye.
+        </p>
+    </div>
+  </body>
+</html>

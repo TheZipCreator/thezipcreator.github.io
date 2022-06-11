@@ -2,6 +2,19 @@
 	font-family: Montserrat;
 	src: url(Montserrat-Regular.ttf)
 }
+@font-face {
+  font-family: FixedSys;
+  src: url(FSEX300.ttf)
+}
+
+pre {
+  white-space: pre-wrap;       /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
 body {
 	font-family: Montserrat;
 	margin: 0;
@@ -14,7 +27,7 @@ textarea.nowordwrap {
   overflow-x: scroll;
 }
 div.center {
-	width: 75%;
+	width: 80%;
 	text-align: center;
 	font-size: 18px;
 	margin:auto;

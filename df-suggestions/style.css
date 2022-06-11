@@ -1,0 +1,61 @@
+@font-face {
+	font-family: SourceCodePro;
+	src: url(../SourceCodePro-Regular.ttf)
+}
+@font-face {
+  font-family: FixedSys;
+  src: url(FSEX300.ttf)
+}
+
+pre {
+  white-space: pre-wrap;       /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+body {
+	font-family: SourceCodePro;
+	margin: 0;
+	padding: 0;
+	background-color: #222222;
+}
+textarea.nowordwrap {
+  white-space: pre;
+  overflow-wrap: normal;
+  overflow-x: scroll;
+}
+div.center {
+	width: 80%;
+	/*text-align: center;*/
+	font-size: 18px;
+	margin:auto;
+	background-color: #111111;
+	color: #FFFFFF
+}
+div.article {
+	width: 70%;
+	text-align: center;
+	font-size: 18px;
+	margin:auto;
+	background-color: #222222;
+	color: #FFFFFF;
+	border-radius: 25px;
+}
+p.title {
+	font-size: 36px;
+	color: #FFFFFF !important;
+}
+a:link {
+	color: #dd9802;
+}
+a:visited {
+	color: #FFFF00;
+}
+a:hover {
+	color: #0088FF;
+}
+a:active {
+	color: #0088FF;
+}
