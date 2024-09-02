@@ -1,0 +1,97 @@
+@font-face {
+	font-family: liberationMono;
+	src: url("liberation_mono.ttf")
+}
+
+body {
+	background-image: url("chars.png");
+	color: #FFFFFF;
+	font-family: liberationMono, monospace;
+}
+
+#box-outer {
+	width: 900px;
+	margin: auto;
+}
+#box-inner {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #8800ff;
+	background-color: rgba(0,0,0,0.5);
+}
+
+#name-text {
+	color: #00ff00;
+	text-align: center;
+	transform: skew(-5deg, -5deg);
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
+textarea.nowordwrap {
+  white-space: pre;
+  overflow-wrap: normal;
+  overflow-x: scroll;
+}
+div.center {
+	width: 80%;
+	text-align: center;
+	font-size: 18px;
+	margin:auto;
+	background-color: #111111;
+	color: #FFFFFF
+}
+div.article {
+	width: 70%;
+	text-align: center;
+	font-size: 18px;
+	margin:auto;
+	background-color: #222222;
+	color: #FFFFFF;
+	border-radius: 25px;
+}
+p.title {
+	font-size: 36px;
+	color: #FFFFFF !important;
+}
+a:link {
+	color: #dd9802;
+}
+a:visited {
+	color: #FFFF00;
+}
+a:hover {
+	color: #0088FF;
+}
+a:active {
+	color: #0088FF;
+}
+
+.labor_color {
+	color: #ff7bd2;
+}
+.liberal_color {
+	color: #9fc5e8;
+}
+.social_color {
+	color: #cc0000;
+}
+.conservative_color {
+	color: #3c78d8;
+}
+.libertarian_color {
+	color: #f1c232;
+}
+.green_color {
+	color: #93c47d;
+}
+.reactionary_color {
+	color: #1c4587;
+}
+.communist_color {
+	color: #990000;
+}

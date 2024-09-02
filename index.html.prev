@@ -1,14 +1,4 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<link rel="stylesheet" type="text/css" href="./new.css" />
-		<title>thezipcreator.github.io</title>
-	</head>
-	<body>
-		<div id="box-outer">
-			<h1 id="name-text">thezipcreator.github.io</h1>
-			<div id="box-inner">
-				  <p>Hello, welcome to my website. Here I host projects I've made</p>
+  <p>Hello, welcome to my website. Here I host projects I've made</p>
   <p><h1><a href="electionsimulator.html">Election Simulator</a></h1>
 An simulator simulating a hypothetical election with Ranked Choice Instant Runoff Voting.</p>
 <p><h1><a href="the_malbolge_conlang.html">\ʎ^"™zþ\}#~\\\z}zJ+\^ }þ^ä-+\z?-~^}?</a></h1>
@@ -18,8 +8,3 @@ The worst conlang (probably) ever made.</p>
 <br>
 <p>I also am a member (and current "owner") of the <a href="http://www.mcwarlords.net">Warlords Minecraft Server</a>. This is a private server for me and my friends, where we have games; but these are sort of unlike other games on Minecraft servers, which are programmed as plugins. Instead, these games are more similar to table-top RPGs, such as Dungeons and Dragons. However, these games are not just limited to playing as characters; we also have games where you can play as a country, civilization or group. If this sounds at all interesting to you, you can check out our <a href="http://www.mcwarlords.net/wiki/Main_Page">our wiki</a> or email me at <a href="mailto:thezipcreator@mcwarlords.net">thezipcreator@mcwarlords.net</a></p>
 <!-- <p><h1><a href="new-world/new-world.html">(new-world)</a></h1>(new-world) is a little text-based "zero-player" game where you can create civilizations and watch them grow and decline</p> -->
-
-			</div>
-		</div>
-	</body>
-</html>

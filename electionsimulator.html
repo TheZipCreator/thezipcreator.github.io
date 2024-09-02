@@ -1,36 +1,42 @@
-<head>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <script src="p5.min.js"></script>
-  <title>Election Simulator</title>
-</head>
+<!DOCTYPE HTML>
 <html>
-  <body>
-    <div class='center' id="center">
-      <h1>Election Simulator</h1>
-	  <p>This is a simulator meant to simulate a hypothetical election with Ranked Choice Instant Runoff Voting. Press R to reset the election.</p>
-	  <h1>Parties</h1>
-	  <p>There are eight parties: Labor, Liberal, Social, Conservative, Libertarian, Green, Reactionary, and Communist</p>
-	  <h2 class="labor_color">Labor</h2>
-	  <p class="labor_color">The labor party is a moderate-left leaning party, equivalent to the Australian, New Zealander, British Labor parties and the Canadian Liberal Party. It’s signature policies and legislative decisions include universal healthcare, multilateralism, peacekeeping, gun control, legalizing same-sex marriage and carbon pricing.<br>A known personality is New Zealand prime-minister Jacinda Ardern.</p>
-	  <h2 class="liberal_color">Liberal</h2>
-	  <p class="liberal_color">The liberal party is a moderate-right leaning party, equivalent to the Democratic Party, the Conservative Party (UK), the Liberal Party of Australia and the Christian Democratic Union of Germany. It advocates for economic liberalism, multilateralism, religious values, limited gun control, among other factors.<br>A known personality is German prime-minister Angela Merkel.</p>
-	  <h2 class="social_color">Social</h2>
-	  <p class="social_color">The social party is a left leaning party, equivalent to the Workers’ Party (Brazil), Social Democratic Party of Germany, Socialist Party (France), Sinn Féin, among others. It advocates for democratic socialism, high wealth taxes, distribution of wealth, welfare programs, drug legalization, among other factors.<br>A known personality is United States senator Bernie Sanders.</p>
-	  <h2 class="conservative_color">Conservative</h2>
-	  <p class="conservative_color">The conservative party is a right leaning party, equivalent to the Republican Party, the Bharatiya Janata Party, UK Independence Party and Movement for France. It advocates for social conservatism, isolationism, low taxation, deregulation, free trade, privatization, among other factors.<br>A known personality is Australian prime-minister Scott Morrison.</p>
-	  <h2 class="libertarian_color">Libertarian</h2>
-	  <p class="libertarian_color">The libertarian party is a right-libertarian leaning party, equivalent to the Libertarian Party (US), the Liberal Democratic Party, KORWiN (Poland) and the Libertarian Party of  Canada. It advocates for Voluntaryism, Laissez-faire capitalism, non-interventionism, fiscal conservatism, cultural liberalism, among other factors.<br>A known personality is United States senator Rand Paul.</p>
-	  <h2 class="green_color">Green</h2>
-	  <p class="green_color">The green party is a moderate-left leaning party, equivalent to The Greens (Germany), Europe Ecology, the Green Party of the United States, Australian Greens and the Green Party (Brazil). It advocates for general environmentalism, ecosocialism, social justice, gender equality, LGBT rights, anti-war, anti-racism, among other factors.<br>A known personality is Canadian prime-minister Justin Trudeau.</p>
-	  <h2 class="reactionary_color">Reactionary</h2>
-	  <p class="reactionary_color">The reactionary party is a far-right leaning party, equivalent to the British National Party the Australia First Party, National Rally (France) and PiS (Poland). It advocates for ultranationalism, anti-globalism, protectionism,  religious fanaticism, anti-immigration, white supremacy, anti-LGBT rights, among other factors.<br>A known personality is Polish president Andrzej Duda.</p>
-	  <h2 class="communist_color">Communist</h2>
-	  <p class="communist_color">The communist party is a far-left leaning party, equivalent to the Communist Party of India, French Communist Party, Workers’ Party of Belgium, United Left (Spain) and The Left (Germany). It advocates for a big government, common ownership of the means of productions, the absence of social classes.<br>A known personality is Cuban “president” Raúl Castro.</p>
-	  <h1>How it works</h1>
-	  <p>There are two main components to this simulation: Parties and Voters. Parties are predefined as the ones above, but voters are distributed randomly. Every party and voter has an X and Y position, corresponding to their position on the <a href="https://www.politicalcompass.org/">Political Compass</a>. There are 1000 voters, 20% of which are given random positions on the compass, meanwhile 80% are distributed on a straight line from libleft to authright, in a way that favors the center. Party positions are defined manually. This system is divided into rounds, (seperated by the "---") and in each round voters vote for whatever candidate is closest. As soon as a majority is reached, voting ends. Each successive round, the party with the lowest amount of votes is eliminated from the race. This effectively simulates Instant Runoff Voting, as Instant Runoff is essentially multiple rounds except with ranked choice.</p> 
-	  <h2>Scandals</h2>
-	  <p>For each party, there is a 1/5 chance that their party commits a scandal. What this means in practical terms is that when calculating the closest party, voters will disfavor that party, and may pick a farther away party instead if it hasn't comitted a scandal.</p>
-	  <script src="electionsimulator.js"></script>
-    </div>
-  </body>
+	<head>
+		<link rel="stylesheet" type="text/css" href="./new.css" />
+		<title>thezipcreator.github.io</title>
+	</head>
+	<body>
+		<div id="box-outer">
+			<h1 id="name-text">thezipcreator.github.io</h1>
+			<div id="box-inner">
+				  <h1>Election Simulator</h1>
+<p>This is a simulator meant to simulate a hypothetical election with Ranked Choice Instant Runoff Voting. Press R to reset the election.</p>
+<h1>Parties</h1>
+<p>There are eight parties: Labor, Liberal, Social, Conservative, Libertarian, Green, Reactionary, and Communist</p>
+<h2 class="labor_color">Labor</h2>
+<p class="labor_color">The labor party is a moderate-left leaning party, equivalent to the Australian, New Zealander, British Labor parties and the Canadian Liberal Party. It’s signature policies and legislative decisions include universal healthcare, multilateralism, peacekeeping, gun control, legalizing same-sex marriage and carbon pricing.<br>A known personality is New Zealand prime-minister Jacinda Ardern.</p>
+<h2 class="liberal_color">Liberal</h2>
+<p class="liberal_color">The liberal party is a moderate-right leaning party, equivalent to the Democratic Party, the Conservative Party (UK), the Liberal Party of Australia and the Christian Democratic Union of Germany. It advocates for economic liberalism, multilateralism, religious values, limited gun control, among other factors.<br>A known personality is German prime-minister Angela Merkel.</p>
+<h2 class="social_color">Social</h2>
+<p class="social_color">The social party is a left leaning party, equivalent to the Workers’ Party (Brazil), Social Democratic Party of Germany, Socialist Party (France), Sinn Féin, among others. It advocates for democratic socialism, high wealth taxes, distribution of wealth, welfare programs, drug legalization, among other factors.<br>A known personality is United States senator Bernie Sanders.</p>
+<h2 class="conservative_color">Conservative</h2>
+<p class="conservative_color">The conservative party is a right leaning party, equivalent to the Republican Party, the Bharatiya Janata Party, UK Independence Party and Movement for France. It advocates for social conservatism, isolationism, low taxation, deregulation, free trade, privatization, among other factors.<br>A known personality is Australian prime-minister Scott Morrison.</p>
+<h2 class="libertarian_color">Libertarian</h2>
+<p class="libertarian_color">The libertarian party is a right-libertarian leaning party, equivalent to the Libertarian Party (US), the Liberal Democratic Party, KORWiN (Poland) and the Libertarian Party of  Canada. It advocates for Voluntaryism, Laissez-faire capitalism, non-interventionism, fiscal conservatism, cultural liberalism, among other factors.<br>A known personality is United States senator Rand Paul.</p>
+<h2 class="green_color">Green</h2>
+<p class="green_color">The green party is a moderate-left leaning party, equivalent to The Greens (Germany), Europe Ecology, the Green Party of the United States, Australian Greens and the Green Party (Brazil). It advocates for general environmentalism, ecosocialism, social justice, gender equality, LGBT rights, anti-war, anti-racism, among other factors.<br>A known personality is Canadian prime-minister Justin Trudeau.</p>
+<h2 class="reactionary_color">Reactionary</h2>
+<p class="reactionary_color">The reactionary party is a far-right leaning party, equivalent to the British National Party the Australia First Party, National Rally (France) and PiS (Poland). It advocates for ultranationalism, anti-globalism, protectionism,  religious fanaticism, anti-immigration, white supremacy, anti-LGBT rights, among other factors.<br>A known personality is Polish president Andrzej Duda.</p>
+<h2 class="communist_color">Communist</h2>
+<p class="communist_color">The communist party is a far-left leaning party, equivalent to the Communist Party of India, French Communist Party, Workers’ Party of Belgium, United Left (Spain) and The Left (Germany). It advocates for a big government, common ownership of the means of productions, the absence of social classes.<br>A known personality is Cuban “president” Raúl Castro.</p>
+<h1>How it works</h1>
+<p>There are two main components to this simulation: Parties and Voters. Parties are predefined as the ones above, but voters are distributed randomly. Every party and voter has an X and Y position, corresponding to their position on the <a href="https://www.politicalcompass.org/">Political Compass</a>. There are 1000 voters, 20% of which are given random positions on the compass, meanwhile 80% are distributed on a straight line from libleft to authright, in a way that favors the center. Party positions are defined manually. This system is divided into rounds, (seperated by the "---") and in each round voters vote for whatever candidate is closest. As soon as a majority is reached, voting ends. Each successive round, the party with the lowest amount of votes is eliminated from the race. This effectively simulates Instant Runoff Voting, as Instant Runoff is essentially multiple rounds except with ranked choice.</p> 
+<h2>Scandals</h2>
+<p>For each party, there is a 1/5 chance that their party commits a scandal. What this means in practical terms is that when calculating the closest party, voters will disfavor that party, and may pick a farther away party instead if it hasn't comitted a scandal.</p>
+<script src="p5.min.js"></script>
+<script src="electionsimulator.js"></script>
+<div id="center"></div>
+
+			</div>
+		</div>
+	</body>
 </html>

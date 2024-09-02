@@ -1,14 +1,4 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<link rel="stylesheet" type="text/css" href="./new.css" />
-		<title>thezipcreator.github.io</title>
-	</head>
-	<body>
-		<div id="box-outer">
-			<h1 id="name-text">thezipcreator.github.io</h1>
-			<div id="box-inner">
-				<h1>DF File Format</h1>
+<h1>DF File Format</h1>
 <p style="color: red;">NOTE: This is still a work in progress</p>
 <br>
 <p>This page contains all information about the DiamondFire/Hypercube file format used for functions</p>
@@ -35,8 +25,3 @@
         
     </table>
   </p>
-
-			</div>
-		</div>
-	</body>
-</html>

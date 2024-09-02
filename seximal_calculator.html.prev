@@ -1,20 +1,5 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<link rel="stylesheet" type="text/css" href="./new.css" />
-		<title>thezipcreator.github.io</title>
-	</head>
-	<body>
-		<div id="box-outer">
-			<h1 id="name-text">thezipcreator.github.io</h1>
-			<div id="box-inner">
-				<h1 id="page_title">Seximal Calculator</h1>
+<h1 id="page_title">Seximal Calculator</h1>
 <p>This is a simple calculator that lets you do calculations in <span id="base">seximal</span>. You can also change the base by pressing tab and using arrow keys to navigate<br><b>NOTE: 99% of the time this is accurate, however sometimes it's off by a a few nifths of a pernif due to float rounding errors</b></p>
 <div id="canvasContainer"></div>
 <script src="p5.min.js"></script>
 <script src="calc.js"></script>
-
-			</div>
-		</div>
-	</body>
-</html>
